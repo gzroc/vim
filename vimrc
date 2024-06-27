@@ -110,7 +110,7 @@ let g:mkdp_browser = 'chromium'
 
 " set to 1, echo preview page url in command line when open preview page
 " default is 0
-let g:mkdp_echo_preview_url = 1
+let g:mkdp_echo_preview_url = 0
 
 " a custom vim function name to open preview page
 " this function will receive url as param
@@ -184,6 +184,10 @@ inoremap . .<C-\><C-O>:AlignCommodity<CR>
 nnoremap <buffer> <leader>= : AlignCommodity<CR>
 vnoremap <buffer> <leader>= : AlignCommodity<CR>
 " ===================beancount设置====================
+" ===================vim-unimpaired设置====================
+" 配置 vim-unimpaired
+let g:unimpaired_clipboard = 1
+" ===================vim-unimpaired设置====================
 
 noremap <LEADER><CR> :nohlsearch<CR>
 
@@ -195,10 +199,11 @@ Plug 'connorholyday/vim-snazzy'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'ycm-core/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 Plug 'karoliskoncevicius/sacredforest-vim'
 Plug 'nathangrigg/vim-beancount' 
 Plug 'yianwillis/vimcdoc'
+Plug 'tpope/vim-unimpaired'
 call plug#end()
 let g:SnazzyTransparent = 1
 color snazzy
