@@ -1,3 +1,4 @@
+map <LEADER> ""
 set backspace=indent,eol,start
 set nocompatible
 filetype on
@@ -110,7 +111,7 @@ let g:mkdp_browser = 'chromium'
 
 " set to 1, echo preview page url in command line when open preview page
 " default is 0
-let g:mkdp_echo_preview_url = 0
+let g:mkdp_echo_preview_url = 1
 
 " a custom vim function name to open preview page
 " this function will receive url as param
@@ -176,7 +177,7 @@ let g:mkdp_theme = 'light'
 let g:beancount_account_completion = 'chunks'
 let g:beancount_detailed_first = 1
 let g:beancount_separator_col = 50
-let g:beancount_root = '~/Documents/Finance/main.bean'
+let b:beancount_root = '~/Documents/Finance/main.bean'
 map m :make<CR>
 " 小数点自动对齐
 "inoremap <C-\><C-O>:AlignCommodity<CR>
@@ -204,11 +205,16 @@ Plug 'karoliskoncevicius/sacredforest-vim'
 Plug 'nathangrigg/vim-beancount' 
 Plug 'yianwillis/vimcdoc'
 Plug 'tpope/vim-unimpaired'
+" 使用回车键选中包裹的代代码 
+Plug 'gcmt/wildfire.vim'
+" 使用S xxx 来替换代码，如果不同，左边会加空格，右边不会,cs字符字符2，将字符1替换为字符2
+Plug 'tpope/vim-surround'
 call plug#end()
 let g:SnazzyTransparent = 1
 color snazzy
 
-"source /home/ken/.vim/snippits.vim
+"导入另一个文件
+source /home/ken/.vim/snippits.vim
 
 
 
