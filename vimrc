@@ -7,6 +7,7 @@ filetype plugin on
 filetype plugin indent on
 set mouse=a
 set encoding=utf-8
+set ambiwidth=double
 let &t_ut=''
 set expandtab
 set shiftwidth=2
@@ -176,12 +177,13 @@ let g:mkdp_theme = 'light'
 " ===================beancount设置====================
 let g:beancount_account_completion = 'chunks'
 let g:beancount_detailed_first = 1
-let g:beancount_separator_col = 50
+let g:beancount_separator_col = 60
 let b:beancount_root = '~/Documents/Finance/main.bean'
 map m :make<CR>
 " 小数点自动对齐
 "inoremap <C-\><C-O>:AlignCommodity<CR>
 inoremap . .<C-\><C-O>:AlignCommodity<CR>
+inoremap : :<C-x><C-o>
 nnoremap <buffer> <leader>= : AlignCommodity<CR>
 vnoremap <buffer> <leader>= : AlignCommodity<CR>
 " ===================beancount设置====================
